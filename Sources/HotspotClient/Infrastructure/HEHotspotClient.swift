@@ -8,6 +8,7 @@
 import Foundation
 import NetworkExtension
 
+@available(iOS 11.0, *)
 public class NEHotspotClient {
   let hotspotManager: NEHotspotConfigurationManager
   
@@ -25,6 +26,7 @@ public class NEHotspotClient {
 }
 
 // MARK: - HotspotClient
+@available(iOS 11.0, *)
 extension NEHotspotClient: HotspotClient {
   public func connect(with configuration: HotspotConfiguration, completion: @escaping (HotspotClient.Result) -> Void) {
     let hotspotConfiguration = NEHotspotConfiguration(ssid: configuration.ssid, passphrase: configuration.password, isWEP: configuration.isWEP)

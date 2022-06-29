@@ -9,6 +9,7 @@ import XCTest
 import NetworkExtension
 @testable import HotspotClient
 
+@available(iOS 11.0, *)
 class HEHotspotClientTests: XCTestCase {
   @available(iOS 15, *)
   func test_init_hasNoSideEffectsOn_iOS15Configuration() {
@@ -60,6 +61,7 @@ class HEHotspotClientTests: XCTestCase {
 }
 
 // MARK: - Private
+@available(iOS 11.0, *)
 private extension HEHotspotClientTests {
   func makeSUT(manager: NEHotspotConfigurationManager = .shared) -> NEHotspotClient {
     let sut = NEHotspotClient(hotspotManager: manager)

@@ -8,6 +8,7 @@
 import XCTest
 @testable import HotspotClient
 
+@available(iOS 11, *)
 class HotspotClientWithValidationTests: XCTestCase {
   func test_init_hasNoSideEffects_onClient_andSSIDLoader() {
     let (_, client, loader) = makeSUT()
@@ -79,6 +80,7 @@ class HotspotClientWithValidationTests: XCTestCase {
 }
 
 // MARK: - Private
+@available(iOS 11, *)
 private extension HotspotClientWithValidationTests {
   var anyError: NSError {
     NSError(domain: "", code: 1, userInfo: nil)
