@@ -29,7 +29,7 @@ public class HotspotClientWithValidation {
 
 // MARK: - HotspotClient
 extension HotspotClientWithValidation: HotspotClient {
-  public func connect(with configuration: HotspotConfiguration, completion: @escaping Completion) {
+  public func connect(with configuration: HotspotConfiguration, completion: @escaping Completion) throws {
     client.connect(with: configuration) { [weak self] result in
       switch result {
       case .success:
